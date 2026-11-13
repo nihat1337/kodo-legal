@@ -22,18 +22,51 @@
   </nav>
 
   <section>
-    <p class="lead">Kodo does not collect any data.</p>
-    <p>There is no account, no analytics, no advertising, no tracking and no server.
-      Nothing you scan or create leaves your device.</p>
+    <p class="lead">Without an account, nothing leaves your iPhone.</p>
+    <p>Kodo has no analytics, no advertising and no tracking. An account is optional and only
+      needed if you want your history on more than one phone. If you create one, Kodo stores
+      only what is listed below, and you can delete all of it from the app at any time.</p>
     <p class="muted">Last updated: 13 November 2026</p>
   </section>
 
   <section>
-    <h2>What Kodo stores</h2>
-    <p>Every code you scan or create is saved to a history list <strong>on your device only</strong>,
-      using Apple's SwiftData. It contains the contents of the code, the type of code, the date,
-      and whether you marked it as a favourite. You can turn history off, delete any entry,
-      or clear all of it in Settings. Deleting the app removes everything.</p>
+    <h2>What Kodo stores on your iPhone</h2>
+    <p>Every code you scan or create is saved to a history list on your device, using Apple's
+      SwiftData. It contains the contents of the code, the type of code, the date, whether you
+      marked it as a favourite, and the folder you put it in. You can turn history off, delete any
+      entry, or clear all of it in Settings. Deleting the app removes everything.</p>
+    <p>Also kept on your device only: your settings, and how many free Kodo Pro tries you have left.
+      If "Show in Spotlight" is on, saved codes are added to your iPhone's own Spotlight index so you
+      can search for them; this index never leaves the device and is removed when you turn the
+      setting off.</p>
+  </section>
+
+  <section>
+    <h2>Kodo account (optional, from version 1.1)</h2>
+    <p>You can sign in with Apple or Google to keep your history and folders on all your phones.
+      Nothing is uploaded until you sign in <strong>and</strong> turn on sync.</p>
+    <table>
+      <tr><th>Account</th><td>Your email address and an account ID. If you use Sign in with Apple and choose
+        "Hide My Email", Kodo only receives Apple's private relay address. Kodo never receives your
+        Apple or Google password.</td></tr>
+      <tr><th>Synced history</th><td>For each code: its contents, type, date, favourite mark and folder, and
+        the names of your folders. When you delete a code, only an empty marker is kept so your other
+        phones remove it too; its contents are erased.</td></tr>
+      <tr><th>Kodo Pro</th><td>If you buy Kodo Pro while signed in: the product, Apple's transaction ID for the
+        subscription, and its expiry date, so Pro works wherever you sign in. Kodo never sees your
+        payment details.</td></tr>
+    </table>
+    <p>This data is used only to provide sync and Pro on your account. It is never sold, shared for
+      advertising, or used to track you. It is stored with
+      <a href="https://supabase.com/privacy">Supabase</a>, which hosts Kodo's database in the
+      European Union and processes it only on Kodo's behalf. Every account can read and change only
+      its own data. Connections are encrypted.</p>
+    <p><strong>Deleting your account:</strong> Settings → Account → Delete account. This permanently
+      deletes the account and everything stored with it on the server, straight away. The history on
+      your iPhone stays. If you only want to stop syncing, turn sync off or sign out.</p>
+    <p>Signing in with Google or Apple is covered by
+      <a href="https://policies.google.com/privacy">Google's</a> or
+      <a href="https://www.apple.com/legal/privacy/">Apple's</a> privacy policy for that step.</p>
   </section>
 
   <section>
@@ -44,6 +77,7 @@
       <tr><th>Photos (add only)</th><td>Only when you tap Save, so a code you created can be written to your photo library. Kodo cannot read your library with this permission.</td></tr>
       <tr><th>Photo picker</th><td>When you scan a code from a picture or choose a logo. iOS hands Kodo only the single image you select.</td></tr>
       <tr><th>Contacts</th><td>Only when you tap "Add to Contacts" on a scanned contact code, so it can be saved to your address book. Kodo does not read your existing contacts.</td></tr>
+      <tr><th>Calendar (add only)</th><td>Only when you tap "Add to Calendar" on a scanned event code. Kodo can add the event but cannot read your calendar.</td></tr>
       <tr><th>Wi-Fi</th><td>Only when you tap "Join network" on a scanned Wi-Fi code, so iOS can connect to that network.</td></tr>
     </table>
   </section>
@@ -51,24 +85,35 @@
   <section>
     <h2>Kodo Pro subscription</h2>
     <p>Kodo Pro is sold through the App Store. Apple handles the payment; Kodo never sees your
-      name, payment details or Apple Account. The app only asks the App Store whether this
-      Apple Account has an active subscription, so it knows whether to unlock Pro features.</p>
-    <p>You can cancel at any time in the Settings app under your name → Subscriptions.
+      name, payment details or Apple Account. The app asks the App Store whether this Apple Account
+      has an active subscription, so it knows whether to unlock Pro features. If you are signed in,
+      the purchase is also linked to your Kodo account as described above.</p>
+    <p>A subscription belongs to the Apple Account that bought it. Deleting your Kodo account does not
+      cancel it: cancel any time in the Settings app under your name → Subscriptions.
       Apple's own privacy policy applies to purchases:
       <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>.</p>
   </section>
 
   <section>
-    <h2>Links you open</h2>
+    <h2>Links and searches you open</h2>
     <p>If you open a link from a scanned code, it opens in your browser and is then subject to that
       website's own privacy policy. Kodo checks the address locally first, to warn you about
       lookalike domains, shortened links, hidden destinations and unencrypted connections.
       This check involves no network request.</p>
+    <p>If you tap Search on a barcode or text code, its contents are sent to the search engine you
+      chose in Settings, in your browser, under that search engine's privacy policy.</p>
   </section>
 
   <section>
+    <h2>Your rights</h2>
+    <p>You can see, change and delete your synced history in the app, and delete your account and all
+      its data in Settings. For a copy of your account data, or any other request about it,
+      <a href="https://github.com/nihat1337/kodo-legal/issues">contact us</a>; we will reply within
+      30 days. Data is kept until you delete it or your account.</p>
+
     <h2>Children</h2>
-    <p>Kodo collects no data from anyone, including children.</p>
+    <p>Kodo is not directed at children and does not knowingly collect data from them. Everything
+      works without an account.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, the new version will be published on this page with a new date.</p>
